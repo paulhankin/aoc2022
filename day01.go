@@ -32,7 +32,7 @@ func parseInput01(r io.Reader) ([]int, error) {
 	return res, s.Err()
 }
 
-func day01(s string) (string, string, error) {
+func day01(s string) (any, any, error) {
 	f, err := os.Open(s)
 	if err != nil {
 		return "", "", err
@@ -47,6 +47,6 @@ func day01(s string) (string, string, error) {
 		return cals[i] > cals[j]
 	})
 
-	return strconv.Itoa(cals[0]), strconv.Itoa(cals[0] + cals[1] + cals[2]), nil
+	return cals[0], cals[0] + cals[1] + cals[2], nil
 
 }

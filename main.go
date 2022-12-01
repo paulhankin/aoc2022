@@ -8,7 +8,7 @@ import (
 
 type Day struct {
 	File string
-	F    func(string) (string, string, error)
+	F    func(string) (any, any, error)
 }
 
 var days = []Day{
