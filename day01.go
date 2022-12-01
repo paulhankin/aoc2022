@@ -1,16 +1,15 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"os"
 	"io"
-	"strings"
+	"os"
 	"sort"
 	"strconv"
+	"strings"
 )
 
-func parseInput(r io.Reader) ([]int, error) {
+func parseInput01(r io.Reader) ([]int, error) {
 	s := bufio.NewScanner(r)
 	var res []int
 	need := true
@@ -33,29 +32,21 @@ func parseInput(r io.Reader) ([]int, error) {
 	return res, s.Err()
 }
 
-func day01() (int, int, error) {
-	f, err := os.Open("day01.txt")
+func day01(s string) (string, string, error) {
+	f, err := os.Open(s)
 	if err != nil {
-		return 0, 0, err
+		return "", "", err
 	}
 	defer f.Close()
-	cals, err := parseInput(f)
+	cals, err := parseInput01(f)
 	if err != nil {
-		return 0, 0, err
+		return "", "", err
 	}
 
 	sort.Slice(cals, func(i, j int) bool {
 		return cals[i] > cals[j]
 	})
 
-	return cals[0], cals[0] + cals[1] + cals[2], nil
+	return strconv.Itoa(cals[0]), strconv.Itoa(cals[0] + cals[1] + cals[2]), nil
 
-}
-
-func main() {
-	a, b, err := day01()
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(a, b)
 }
