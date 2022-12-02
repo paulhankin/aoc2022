@@ -7,6 +7,7 @@ import (
 
 var wantFull [][2]any = [][2]any{
 	1: {68787, 198041},
+	2: {14264, 12382},
 }
 
 func TestMissing(t *testing.T) {

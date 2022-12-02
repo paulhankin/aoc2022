@@ -14,6 +14,7 @@ type Day struct {
 var days = []Day{
 	{},
 	{"day01.txt", day01},
+	{"day02.txt", day02},
 }
 
 var dayFlag = flag.Int("day", 0, "which day (0 = all)")
