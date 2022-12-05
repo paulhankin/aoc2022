@@ -17,6 +17,7 @@ var days = []Day{
 	{"day02.txt", day02},
 	{"day03.txt", day03},
 	{"day04.txt", day04},
+	{"day05.txt", day05},
 }
 
 var dayFlag = flag.Int("day", 0, "which day (0 = all)")

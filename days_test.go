@@ -50,6 +50,7 @@ type partialTest struct {
 var wantPartial = []partialTest{
 	{4, "day04_test.txt", 1, 2},
 	{4, "day04_test.txt", 2, 4},
+	{5, "day05_test.txt", 1, "CMZ"},
 }
 
 func TestDayPartial(t *testing.T) {
