@@ -10,6 +10,8 @@ var wantFull [][2]any = [][2]any{
 	2: {14264, 12382},
 	3: {8401, 2641},
 	4: {444, 801},
+	5: {"WSFTMRHPP", "GSLCMFBRP"},
+	6: {1802, 3551},
 }
 
 func TestMissing(t *testing.T) {
