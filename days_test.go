@@ -13,6 +13,7 @@ var wantFull [][2]any = [][2]any{
 	5: {"WSFTMRHPP", "GSLCMFBRP"},
 	6: {1802, 3551},
 	7: {1581595, 1544176},
+	8: {1705, 371200},
 }
 
 func TestMissing(t *testing.T) {
@@ -56,6 +57,8 @@ var wantPartial = []partialTest{
 	{5, "day05_test.txt", 1, "CMZ"},
 	{7, "day07_test.txt", 1, 95437},
 	{7, "day07_test.txt", 2, 24933642},
+	{8, "day08_test.txt", 1, 21},
+	{8, "day08_test.txt", 2, 8},
 }
 
 func TestDayPartial(t *testing.T) {
