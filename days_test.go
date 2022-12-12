@@ -25,6 +25,7 @@ var wantFull [][2]any = [][2]any{
 	9:  {6357, 2627},
 	10: {13860, day10part2[1:]},
 	11: {61503, 14081365540},
+	12: {408, 399},
 }
 
 func TestMissing(t *testing.T) {
