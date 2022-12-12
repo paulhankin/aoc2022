@@ -30,21 +30,6 @@ func parse09(r io.Reader) ([]d09, error) {
 	return rr, s.Err()
 }
 
-func abs(n int) int {
-	if n < 0 {
-		return -n
-	}
-	return n
-}
-func sgn(n int) int {
-	if n < 0 {
-		return -1
-	} else if n > 0 {
-		return 1
-	}
-	return 0
-}
-
 func printChain(c [][2]int, n, m int) {
 	for j := -n; j < n; j++ {
 		for i := -m; i < m; i++ {
