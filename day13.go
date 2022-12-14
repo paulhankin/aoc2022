@@ -134,7 +134,6 @@ func day13(fn string) (any, any, error) {
 	}
 	div2 := d13{ns: []d13{{ns: []d13{{n: 2}}}}}
 	div6 := d13{ns: []d13{{ns: []d13{{n: 6}}}}}
-	fmt.Println(div2, div6)
 
 	all = append(all, div2, div6)
 	sort.Slice(all, func(i, j int) bool {
