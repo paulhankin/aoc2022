@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"testing"
 )
@@ -30,7 +31,12 @@ var wantFull [][2]any = [][2]any{
 	14: {655, 26484},
 	15: {4724228, 13622251246513},
 	16: {1595, 2189},
+	17: {0, 0},
 }
+
+var skipSlow = flag.Bool("skip-slow", false, "skip slow tests")
+
+var slowDays = map[int]bool{15: true, 16: true}
 
 func TestMissing(t *testing.T) {
 	for i := range days {
@@ -49,6 +55,9 @@ func TestDayFull(t *testing.T) {
 			continue
 		}
 		t.Run(fmt.Sprintf("day%02d full", i), func(t *testing.T) {
+			if *skipSlow && slowDays[i] {
+				t.Skip("skipped day", i, "because of -skip-slow")
+			}
 			gota, gotb, goterr := days[i].F(days[i].File)
 			if goterr != nil {
 				t.Fatal(goterr)
@@ -103,6 +112,9 @@ var wantPartial = []partialTest{
 func TestDayPartial(t *testing.T) {
 	for _, w := range wantPartial {
 		t.Run(fmt.Sprintf("day%02d:%d on %s", w.day, w.part, w.filename), func(t *testing.T) {
+			if *skipSlow && slowDays[w.day] {
+				t.Skip("skipped day", w.day, "because of -skip-slow")
+			}
 			gota, gotb, goterr := days[w.day].F(w.filename)
 			if goterr != nil {
 				t.Fatal(goterr)
