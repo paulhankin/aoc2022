@@ -107,6 +107,8 @@ var wantPartial = []partialTest{
 	{15, "day15_test.txt", 2, 56000011},
 	{16, "day16_test.txt", 1, 1651},
 	{16, "day16_test.txt", 2, 1707},
+	{17, "day17_test.txt", 1, 0},
+	{17, "day17_test.txt", 2, 0},
 }
 
 func TestDayPartial(t *testing.T) {
