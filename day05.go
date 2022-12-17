@@ -8,6 +8,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(5, day05)
+}
+
 type move05 struct {
 	n, from, to int
 }

@@ -8,6 +8,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(4, day04)
+}
+
 type day04d struct {
 	a, b [2]int
 }

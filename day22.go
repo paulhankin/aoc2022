@@ -7,6 +7,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(22, day22)
+}
+
 func parse22(r io.Reader) ([]byte, error) {
 	s := bufio.NewScanner(r)
 	var rr []byte

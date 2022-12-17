@@ -13,6 +13,10 @@ import (
 	"text/scanner"
 )
 
+func init() {
+	registerDay(13, day13)
+}
+
 type d13 struct {
 	n  int
 	ns []d13

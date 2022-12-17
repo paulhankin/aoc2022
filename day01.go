@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(1, day01)
+}
+
 func parseInput01(r io.Reader) ([]int, error) {
 	s := bufio.NewScanner(r)
 	var res []int

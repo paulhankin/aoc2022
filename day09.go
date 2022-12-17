@@ -8,6 +8,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(9, day09)
+}
+
 type d09 struct {
 	c byte
 	i int

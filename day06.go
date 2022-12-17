@@ -4,6 +4,10 @@ import (
 	"os"
 )
 
+func init() {
+	registerDay(6, day06)
+}
+
 func day06(filename string) (any, any, error) {
 	r, err := os.ReadFile(filename)
 	if err != nil {

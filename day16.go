@@ -10,6 +10,10 @@ import (
 	"sync"
 )
 
+func init() {
+	registerDay(16, day16)
+}
+
 type d16s struct {
 	name    string
 	flow    int

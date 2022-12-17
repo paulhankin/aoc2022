@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(7, day07)
+}
+
 type cmd07 struct {
 	command string
 	output  []string

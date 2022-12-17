@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(10, day10)
+}
+
 type opcode10 int
 
 const (

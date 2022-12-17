@@ -11,6 +11,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(11, day11)
+}
+
 type data11 struct {
 	monkey              int
 	startItems          []int

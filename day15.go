@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+func init() {
+	registerDay(15, day15)
+}
+
 type d15 struct {
 	sensor [2]int
 	beacon [2]int
