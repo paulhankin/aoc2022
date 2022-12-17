@@ -32,6 +32,14 @@ var wantFull [][2]any = [][2]any{
 	15: {4724228, 13622251246513},
 	16: {1595, 2189},
 	17: {3144, 1565242165201},
+	18: {0, 0},
+	19: {0, 0},
+	20: {0, 0},
+	21: {0, 0},
+	22: {0, 0},
+	23: {0, 0},
+	24: {0, 0},
+	25: {0, 0},
 }
 
 var skipSlow = flag.Bool("skip-slow", false, "skip slow tests")
@@ -109,6 +117,22 @@ var wantPartial = []partialTest{
 	{16, "day16_test.txt", 2, 1707},
 	{17, "day17_test.txt", 1, 3068},
 	{17, "day17_test.txt", 2, 1514285714288},
+	{18, "day18_test.txt", 1, 0},
+	{18, "day18_test.txt", 2, 0},
+	{19, "day19_test.txt", 1, 0},
+	{19, "day19_test.txt", 2, 0},
+	{20, "day20_test.txt", 1, 0},
+	{20, "day20_test.txt", 2, 0},
+	{21, "day21_test.txt", 1, 0},
+	{21, "day21_test.txt", 2, 0},
+	{22, "day22_test.txt", 1, 0},
+	{22, "day22_test.txt", 2, 0},
+	{23, "day23_test.txt", 1, 0},
+	{23, "day23_test.txt", 2, 0},
+	{24, "day24_test.txt", 1, 0},
+	{24, "day24_test.txt", 2, 0},
+	{25, "day25_test.txt", 1, 0},
+	{25, "day25_test.txt", 2, 0},
 }
 
 func TestDayPartial(t *testing.T) {
