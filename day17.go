@@ -60,10 +60,6 @@ const TN = 45
 
 var hash17 maphash.Hash
 
-func init() {
-	hash17.SetSeed(maphash.MakeSeed())
-}
-
 func key17(tower []byte, top, R, gust int) uint64 {
 	hash17.Reset()
 	for i := 0; i < TN; i++ {
