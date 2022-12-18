@@ -32,7 +32,7 @@ var wantFull [][2]any = [][2]any{
 	15: {4724228, 13622251246513},
 	16: {1595, 2189},
 	17: {3144, 1565242165201},
-	18: {0, 0},
+	18: {4636, 2572},
 	19: {0, 0},
 	20: {0, 0},
 	21: {0, 0},
@@ -44,7 +44,7 @@ var wantFull [][2]any = [][2]any{
 
 var skipSlow = flag.Bool("skip-slow", false, "skip slow tests")
 
-var slowDays = map[int]bool{15: true, 16: true}
+var slowDays = map[int]bool{16: true}
 
 func TestMissing(t *testing.T) {
 	for i := range days {

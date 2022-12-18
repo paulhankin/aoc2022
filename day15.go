@@ -106,14 +106,31 @@ func day15(fn string) (any, any, error) {
 	if isTest {
 		ymax = 20
 	}
-	var part2 int
-	for y := 0; y <= ymax; y++ {
-		r := findRanges15(dd, y)
-		if len(r) == 2 {
-			part2 = 4000000*r[0][1] + y
-			break
+	part2 := func() int {
+		for i := range dd {
+			disti := abs(dd[i].sensor[0]-dd[i].beacon[0]) + abs(dd[i].sensor[1]-dd[i].beacon[1])
+			for j := range dd {
+				distj := abs(dd[j].sensor[0]-dd[j].beacon[0]) + abs(dd[j].sensor[1]-dd[j].beacon[1])
+				for di := 0; di <= 1; di++ {
+					for dj := 0; dj <= 1; dj++ {
+						xpy := dd[i].sensor[0] + dd[i].sensor[1] - disti - di
+						xmy := dd[j].sensor[0] - dd[j].sensor[1] + distj + dj
+						if (xpy+xmy)%2 != 0 {
+							continue
+						}
+						y := (xpy - xmy) / 2
+						if 0 <= y && y <= ymax {
+							r := findRanges15(dd, y)
+							if len(r) == 2 {
+								return 4000000*r[0][1] + y
+							}
+						}
+					}
+				}
+			}
 		}
+		return -1
 	}
 
-	return part1, part2, nil
+	return part1, part2(), nil
 }
