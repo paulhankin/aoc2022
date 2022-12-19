@@ -119,7 +119,7 @@ var wantPartial = []partialTest{
 	{17, "day17_test.txt", 2, 1514285714288},
 	{18, "day18_test.txt", 1, 64},
 	{18, "day18_test.txt", 2, 58},
-	{19, "day19_test.txt", 1, 0},
+	{19, "day19_test.txt", 1, 33},
 	{19, "day19_test.txt", 2, 0},
 	{20, "day20_test.txt", 1, 0},
 	{20, "day20_test.txt", 2, 0},
